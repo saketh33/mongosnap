@@ -1,3 +1,5 @@
+import time
+start= time.time()
 import xmltodict
 import json
 import os
@@ -30,3 +32,5 @@ for file_name in l:
     with open(file_name) as f:
         file_data = json.load(f)
         mydatabase.bigfile.insert_one(file_data)
+end = time.time()
+print("The time of execution of above program is :", end-start)
